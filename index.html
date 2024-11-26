@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Simple application for bookmarking webistes. This app goes along with the Learn JavaScript By Building A Bookmarking App tutorial.
+    "
+    />
+    <title>Bookmarker</title>
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <header class="py-5"><h1 class="mx-auto">Bookmarker</h1></header>
+    <main>
+      <section class="bookmark">
+        <div class="container">
+          <header class="py-4 d-flex justify-content-center align-items-center">
+            <span><i class="fa-solid fa-bookmark" id="left-icon"></i></span>
+            <h2>Bookmark your favorite sites</h2>
+            <span><i class="fa-solid fa-bookmark" id="right-icon"></i></span>
+          </header>
+          <form action="">
+            <div class="site-name">
+              <span class="pe-2"
+                ><i class="fa-solid fa-book-bookmark"></i
+              ></span>
+              <label for="SiteName">Site-Name</label>
+              <input
+                type="text"
+                name="Site-Name"
+                id="SiteName"
+                class="form-control py-2 mt-2 mb-4"
+                placeholder="Bookmark Name"
+              />
+            </div>
+            <div class="site-url">
+              <span class="pe-1"><i class="fa-solid fa-link"></i></span>
+              <label for="SiteURL">Site-URL</label>
+              <input
+                type="text"
+                name="Site-URL"
+                id="SiteURL"
+                class="form-control py-2 mt-2 mb-4"
+                placeholder="Website URL"
+              />
+            </div>
+          </form>
+          <button
+            id="btnSubmit"
+            class="btn rounded-2 px-5 py-2 d-block mx-auto mb-4"
+          >
+            Submit
+          </button>
+        </div>
+      </section>
+      <section class="display-data my-4">
+        <div class="container">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th scope="col">index</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </section>
+      <div
+        class="validation-layer d-flex align-items-center justify-content-center d-none"
+      >
+        <div class="row">
+          <div class="card text-bg-white mb-3 col-md-10 col-sm-6 pb-3">
+            <div
+              class="card-header border-0 bg-white d-flex align-items-center justify-content-between"
+            >
+              <div class="circles d-flex gap-2 py-4">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span id="btnClose" class="pe-3"
+                ><i class="fa-solid fa-xmark"></i
+              ></span>
+            </div>
+            <div class="card-body pt-0">
+              <h5 class="card-title my-2">
+                Site Name or Url is not valid, Please follow the rules below :
+              </h5>
+              <div
+                class="name-regex d-flex align-items-center justify-content-start my-2"
+              >
+                <span><i class="fa-regular fa-circle-right p-2"></i></span>
+                <p class="mb-0">Site name must contain at least 3 characters</p>
+              </div>
+              <div
+                class="URL-regex d-flex align-items-center justify-content-start my-2"
+              >
+                <span><i class="fa-regular fa-circle-right p-2"></i></span>
+                <p class="mb-0">Site URL must be a valid one</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

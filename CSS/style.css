@@ -1,0 +1,185 @@
+/**************************************** Start Global ***************************************/
+@font-face {
+  font-family: pacifico;
+  src: url(../webfonts/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: "Bree Serif-400";
+  src: url(../webfonts/BreeSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: Righteous;
+  src: url(../webfonts/Righteous-Regular.ttf);
+}
+@font-face {
+  font-family: "PT-Sans-Caption";
+  src: url(../webfonts/PTSansCaption-Regular.ttf);
+}
+@font-face {
+  font-family: "PT-Sans-Caption-700";
+  src: url(../webfonts/PTSansCaption-Bold.ttf);
+}
+
+body {
+  background-color: #f7ecde;
+  font-family: "PT-Sans-Caption";
+}
+h1 {
+  font-family: pacifico;
+  font-size: 3.125rem;
+  line-height: 3.75rem;
+  color: #352e28;
+  position: relative;
+  width: fit-content;
+}
+
+h2 {
+  font-family: Righteous;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  background-image: linear-gradient(to right, #3ea55c, #b2ac49);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+h1::after {
+  content: "";
+  width: 100%;
+  height: 30%;
+  background-color: #fec260;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+h1:hover::after {
+  height: 70%;
+}
+
+/**************************************** End Global ***************************************/
+/**************************************** Start Bookmark ***************************************/
+.bookmark .container {
+  border-bottom: 1px dashed black;
+  border-top: 1px dashed black;
+}
+.bookmark i {
+  font-size: 1.5625rem;
+  line-height: 1.5625rem;
+}
+.bookmark #left-icon {
+  color: #3ea55c;
+  position: relative;
+  right: 5px;
+}
+.bookmark #right-icon {
+  color: #b2ac49;
+  position: relative;
+  left: 5px;
+}
+
+.site-name i {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #212529;
+}
+.site-url i {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #212529;
+}
+.bookmark label {
+  font-family: "PT-Sans-Caption";
+  font-weight: 600;
+}
+.bookmark .form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.bookmark button {
+  background-color: #d1512d;
+  transition: all 0.4s;
+  color: white;
+}
+.bookmark button:hover {
+  background-color: #bb4120;
+  color: white;
+}
+/**************************************** End Bookmark ***************************************/
+/**************************************** Start displayContent ***************************************/
+#btnVisit {
+  background-color: #9eb23b;
+  border: 1px solid #9eb23b;
+  color: white;
+  transition: all 0.4s;
+}
+#btnDelete {
+  background-color: #eb1d36;
+  border: 1px solid #eb1d36;
+  color: white;
+  transition: all 0.4s;
+}
+
+#btnVisit:hover {
+  background-color: #6e8018;
+}
+#btnDelete:hover {
+  background-color: #d30820;
+}
+/**************************************** End displayContent ***************************************/
+/**************************************** Start ValidationLayer ***************************************/
+.validation-layer #red-circle {
+  color: #f15f5d;
+  font-size: 16px;
+}
+/**************************************** End ValidationLayer ***************************************/
+.circles span {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: block;
+}
+.circles span:nth-child(1) {
+  background-color: #f15f5d;
+}
+.circles span:nth-child(2) {
+  background-color: #febe2e;
+}
+.circles span:nth-child(3) {
+  background-color: #4db748;
+}
+h5 {
+  font-family: "Bree Serif-400";
+  font-size: 1.3125rem;
+  line-height: 1.6875rem;
+  color: #352e28;
+}
+.validation-layer .card-body p {
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  color: #212529;
+}
+.validation-layer .card-body span i {
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  color: #bb4120;
+}
+.validation-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.validation-layer .card-header span i {
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  color: #212529;
+  cursor: pointer;
+}
